@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments :: head('Predicciones')}"></head>
+<body>
+<header th:replace="~{fragments :: nav}"></header>
+<main class="container">
+    <h1>Predicciones registradas</h1>
+
+    <p th:if="${#lists.isEmpty(predictions)}" class="empty">
+        Aun no hay predicciones. Ve a <a th:href="@{/matches}">partidos</a> y registra una.
+    </p>
+
+    <table th:unless="${#lists.isEmpty(predictions)}">
+        <thead>
+        <tr><th>Partido</th><th>Nombre</th><th>Resultado</th><th>Marcador</th><th>Real</th><th>Acierto</th><th>Registrada</th></tr>
+        </thead>
+        <tbody>
+        <tr th:each="p : ${predictions}">
+            <td><a th:href="@{/matches/{id}(id=${p.match.id})}"
+                   th:text="${p.match.homeTeam} + ' vs ' + ${p.match.awayTeam}"></a></td>
+            <td th:text="${p.author}"></td>
+            <td th:text="${p.outcome.label}"></td>
+            <td th:text="${p.homeGoals} + ' - ' + ${p.awayGoals}"></td>
+            <td th:text="${p.match.finished} ? ${p.match.homeScore} + ' - ' + ${p.match.awayScore} : '-'"></td>
+            <td>
+                <span th:if="${p.hit == null}">Pendiente</span>
+                <span th:if="${p.hit != null and p.exactScore}" class="hit">Exacto</span>
+                <span th:if="${p.hit != null and p.hit and !p.exactScore}" class="hit">Si</span>
+                <span th:if="${p.hit != null and !p.hit}" class="miss">No</span>
+            </td>
+            <td th:text="${#temporals.format(p.createdAtLima, 'dd/MM/yyyy HH:mm')}"></td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+</body>
+</html>

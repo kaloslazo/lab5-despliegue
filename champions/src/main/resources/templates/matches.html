@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments :: head('Partidos')}"></head>
+<body>
+<header th:replace="~{fragments :: nav}"></header>
+<main class="container">
+    <div class="title-row">
+        <h1>Partidos</h1>
+        <span class="tag" th:text="'Fuente: ' + ${source}">Fuente</span>
+    </div>
+
+    <form class="filter" method="get" th:action="@{/matches}">
+        <label for="stage">Fase</label>
+        <select id="stage" name="stage" onchange="this.form.submit()">
+            <option value="">Todas</option>
+            <option th:each="s : ${stages}" th:value="${s}" th:text="${@labels.stage(s)}"
+                    th:selected="${s == stage}"></option>
+        </select>
+    </form>
+
+    <p th:if="${#lists.isEmpty(matches)}" class="empty">No hay partidos cargados.</p>
+
+    <table th:unless="${#lists.isEmpty(matches)}">
+        <thead>
+        <tr>
+            <th>Fecha (Lima)</th>
+            <th>Fase</th>
+            <th>Local</th>
+            <th></th>
+            <th>Visita</th>
+            <th>Estado</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="m : ${matches}">
+            <td th:text="${#temporals.format(m.kickoffLima, 'dd/MM/yyyy HH:mm')}"></td>
+            <td th:text="${@labels.stage(m.stage)} + (${m.matchday} != null ? ' - J' + ${m.matchday} : '')"></td>
+            <td class="team">
+                <img th:if="${m.homeCrest}" th:src="${m.homeCrest}" alt="" class="crest">
+                <span th:text="${m.homeTeam}"></span>
+            </td>
+            <td class="score" th:text="${m.finished} ? ${m.homeScore} + ' - ' + ${m.awayScore} : 'vs'"></td>
+            <td class="team">
+                <img th:if="${m.awayCrest}" th:src="${m.awayCrest}" alt="" class="crest">
+                <span th:text="${m.awayTeam}"></span>
+            </td>
+            <td><span class="status" th:classappend="${m.status}" th:text="${@labels.status(m.status)}"></span></td>
+            <td><a class="btn small" th:href="@{/matches/{id}(id=${m.id})}"
+                   th:text="${m.finished} ? 'Ver' : 'Predecir'"></a></td>
+        </tr>
+        </tbody>
+    </table>
+</main>
+</body>
+</html>

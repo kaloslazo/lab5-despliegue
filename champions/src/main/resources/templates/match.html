@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments :: head(${match.homeTeam} + ' vs ' + ${match.awayTeam})}"></head>
+<body>
+<header th:replace="~{fragments :: nav}"></header>
+<main class="container">
+    <a th:href="@{/matches}" class="back">&larr; Volver</a>
+
+    <section class="match-card">
+        <div class="side">
+            <img th:if="${match.homeCrest}" th:src="${match.homeCrest}" alt="" class="crest big">
+            <h2 th:text="${match.homeTeam}"></h2>
+        </div>
+        <div class="middle">
+            <div class="big-score" th:text="${match.finished} ? ${match.homeScore} + ' - ' + ${match.awayScore} : 'vs'"></div>
+            <div th:text="${#temporals.format(match.kickoffLima, 'dd/MM/yyyy HH:mm')}"></div>
+            <span class="status" th:classappend="${match.status}" th:text="${@labels.status(match.status)}"></span>
+        </div>
+        <div class="side">
+            <img th:if="${match.awayCrest}" th:src="${match.awayCrest}" alt="" class="crest big">
+            <h2 th:text="${match.awayTeam}"></h2>
+        </div>
+    </section>
+
+    <div th:if="${ok}" class="alert ok" th:text="${ok}"></div>
+    <div th:if="${error}" class="alert error" th:text="${error}"></div>
+
+    <section th:unless="${match.finished}" class="panel">
+        <h3>Registrar prediccion</h3>
+        <form method="post" th:action="@{/matches/{id}/predictions(id=${match.id})}" th:object="${form}" class="predict">
+            <div class="field">
+                <label for="author">Tu nombre</label>
+                <input id="author" type="text" th:field="*{author}" maxlength="60">
+                <small class="err" th:if="${#fields.hasErrors('author')}" th:errors="*{author}"></small>
+            </div>
+
+            <div class="field">
+                <label>Resultado</label>
+                <div class="radios">
+                    <label th:each="o : ${outcomes}">
+                        <input type="radio" th:field="*{outcome}" th:value="${o}">
+                        <span th:text="${o.label}"></span>
+                    </label>
+                </div>
+                <small class="err" th:if="${#fields.hasErrors('outcome')}" th:errors="*{outcome}"></small>
+            </div>
+
+            <div class="field">
+                <label>Marcador estimado</label>
+                <div class="goals">
+                    <input type="number" min="0" max="20" th:field="*{homeGoals}">
+                    <span>-</span>
+                    <input type="number" min="0" max="20" th:field="*{awayGoals}">
+                </div>
+                <small class="err" th:if="${#fields.hasErrors('homeGoals') or #fields.hasErrors('awayGoals')}">
+                    Marcador invalido (0 a 20)
+                </small>
+            </div>
+
+            <button type="submit" class="btn">Guardar</button>
+        </form>
+    </section>
+
+    <section class="panel">
+        <h3>Predicciones de este partido</h3>
+        <p th:if="${#lists.isEmpty(predictions)}" class="empty">Todavia no hay predicciones.</p>
+        <table th:unless="${#lists.isEmpty(predictions)}">
+            <thead><tr><th>Nombre</th><th>Resultado</th><th>Marcador</th><th>Fecha</th></tr></thead>
+            <tbody>
+            <tr th:each="p : ${predictions}">
+                <td th:text="${p.author}"></td>
+                <td th:text="${p.outcome.label}"></td>
+                <td th:text="${p.homeGoals} + ' - ' + ${p.awayGoals}"></td>
+                <td th:text="${#temporals.format(p.createdAtLima, 'dd/MM/yyyy HH:mm')}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+</body>
+</html>
