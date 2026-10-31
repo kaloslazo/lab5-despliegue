@@ -1,0 +1,1408 @@
+{
+  "matches": [
+    {
+      "id": 600001,
+      "utcDate": "2026-09-15T17:00:00Z",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "homeTeam": {
+        "id": null,
+        "name": "Manchester City FC",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "FC Internazionale Milano",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": "HOME_TEAM",
+        "fullTime": {
+          "home": 4,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": 600002,
+      "utcDate": "2026-09-15T20:00:00Z",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "homeTeam": {
+        "id": null,
+        "name": "Real Madrid CF",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Club Atlético de Madrid",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": "DRAW",
+        "fullTime": {
+          "home": 3,
+          "away": 3
+        }
+      }
+    },
+    {
+      "id": 600003,
+      "utcDate": "2026-09-15T17:00:00Z",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "homeTeam": {
+        "id": null,
+        "name": "SSC Napoli",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Sporting Clube de Portugal",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": "AWAY_TEAM",
+        "fullTime": {
+          "home": 2,
+          "away": 3
+        }
+      }
+    },
+    {
+      "id": 600004,
+      "utcDate": "2026-09-15T20:00:00Z",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "homeTeam": {
+        "id": null,
+        "name": "Paris Saint-Germain FC",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Galatasaray SK",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": "AWAY_TEAM",
+        "fullTime": {
+          "home": 0,
+          "away": 2
+        }
+      }
+    },
+    {
+      "id": 600005,
+      "utcDate": "2026-09-15T17:00:00Z",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "homeTeam": {
+        "id": null,
+        "name": "Juventus FC",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "FC Bayern München",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": "HOME_TEAM",
+        "fullTime": {
+          "home": 4,
+          "away": 1
+        }
+      }
+    },
+    {
+      "id": 600006,
+      "utcDate": "2026-09-16T20:00:00Z",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "homeTeam": {
+        "id": null,
+        "name": "Club Brugge KV",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Arsenal FC",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": "HOME_TEAM",
+        "fullTime": {
+          "home": 4,
+          "away": 1
+        }
+      }
+    },
+    {
+      "id": 600007,
+      "utcDate": "2026-09-16T17:00:00Z",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "homeTeam": {
+        "id": null,
+        "name": "Chelsea FC",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "FC Barcelona",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": "HOME_TEAM",
+        "fullTime": {
+          "home": 3,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": 600008,
+      "utcDate": "2026-09-16T20:00:00Z",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "homeTeam": {
+        "id": null,
+        "name": "Liverpool FC",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Borussia Dortmund",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": "HOME_TEAM",
+        "fullTime": {
+          "home": 3,
+          "away": 1
+        }
+      }
+    },
+    {
+      "id": 600009,
+      "utcDate": "2026-09-16T17:00:00Z",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 1,
+      "homeTeam": {
+        "id": null,
+        "name": "Bayer 04 Leverkusen",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "PSV",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": "HOME_TEAM",
+        "fullTime": {
+          "home": 1,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": 600010,
+      "utcDate": "2026-09-29T17:00:00Z",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "homeTeam": {
+        "id": null,
+        "name": "Chelsea FC",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "FC Internazionale Milano",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": "HOME_TEAM",
+        "fullTime": {
+          "home": 3,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": 600011,
+      "utcDate": "2026-09-29T20:00:00Z",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "homeTeam": {
+        "id": null,
+        "name": "Paris Saint-Germain FC",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Galatasaray SK",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": "AWAY_TEAM",
+        "fullTime": {
+          "home": 1,
+          "away": 2
+        }
+      }
+    },
+    {
+      "id": 600012,
+      "utcDate": "2026-09-29T17:00:00Z",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "homeTeam": {
+        "id": null,
+        "name": "Real Madrid CF",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "SSC Napoli",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": "DRAW",
+        "fullTime": {
+          "home": 0,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": 600013,
+      "utcDate": "2026-09-29T20:00:00Z",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "homeTeam": {
+        "id": null,
+        "name": "Juventus FC",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "FC Barcelona",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": "HOME_TEAM",
+        "fullTime": {
+          "home": 3,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": 600014,
+      "utcDate": "2026-09-29T17:00:00Z",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "homeTeam": {
+        "id": null,
+        "name": "Manchester City FC",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Club Brugge KV",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": "HOME_TEAM",
+        "fullTime": {
+          "home": 2,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": 600015,
+      "utcDate": "2026-09-30T20:00:00Z",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "homeTeam": {
+        "id": null,
+        "name": "Liverpool FC",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Club Atlético de Madrid",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": "AWAY_TEAM",
+        "fullTime": {
+          "home": 1,
+          "away": 2
+        }
+      }
+    },
+    {
+      "id": 600016,
+      "utcDate": "2026-09-30T17:00:00Z",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "homeTeam": {
+        "id": null,
+        "name": "Sporting Clube de Portugal",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "FC Bayern München",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": "HOME_TEAM",
+        "fullTime": {
+          "home": 2,
+          "away": 1
+        }
+      }
+    },
+    {
+      "id": 600017,
+      "utcDate": "2026-09-30T20:00:00Z",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "homeTeam": {
+        "id": null,
+        "name": "Borussia Dortmund",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Arsenal FC",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": "AWAY_TEAM",
+        "fullTime": {
+          "home": 0,
+          "away": 1
+        }
+      }
+    },
+    {
+      "id": 600018,
+      "utcDate": "2026-09-30T17:00:00Z",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 2,
+      "homeTeam": {
+        "id": null,
+        "name": "Bayer 04 Leverkusen",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "PSV",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": "HOME_TEAM",
+        "fullTime": {
+          "home": 2,
+          "away": 1
+        }
+      }
+    },
+    {
+      "id": 600019,
+      "utcDate": "2026-10-20T17:00:00Z",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "homeTeam": {
+        "id": null,
+        "name": "Club Atlético de Madrid",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Liverpool FC",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": "HOME_TEAM",
+        "fullTime": {
+          "home": 2,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": 600020,
+      "utcDate": "2026-10-20T20:00:00Z",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "homeTeam": {
+        "id": null,
+        "name": "PSV",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Paris Saint-Germain FC",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": "DRAW",
+        "fullTime": {
+          "home": 1,
+          "away": 1
+        }
+      }
+    },
+    {
+      "id": 600021,
+      "utcDate": "2026-10-20T17:00:00Z",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "homeTeam": {
+        "id": null,
+        "name": "Borussia Dortmund",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "FC Barcelona",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": "HOME_TEAM",
+        "fullTime": {
+          "home": 4,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": 600022,
+      "utcDate": "2026-10-20T20:00:00Z",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "homeTeam": {
+        "id": null,
+        "name": "Chelsea FC",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Club Brugge KV",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": "HOME_TEAM",
+        "fullTime": {
+          "home": 2,
+          "away": 1
+        }
+      }
+    },
+    {
+      "id": 600023,
+      "utcDate": "2026-10-20T17:00:00Z",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "homeTeam": {
+        "id": null,
+        "name": "Bayer 04 Leverkusen",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "FC Bayern München",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": "HOME_TEAM",
+        "fullTime": {
+          "home": 3,
+          "away": 0
+        }
+      }
+    },
+    {
+      "id": 600024,
+      "utcDate": "2026-10-21T20:00:00Z",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "homeTeam": {
+        "id": null,
+        "name": "FC Internazionale Milano",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Sporting Clube de Portugal",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": "DRAW",
+        "fullTime": {
+          "home": 1,
+          "away": 1
+        }
+      }
+    },
+    {
+      "id": 600025,
+      "utcDate": "2026-10-21T17:00:00Z",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "homeTeam": {
+        "id": null,
+        "name": "Arsenal FC",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "SSC Napoli",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": "HOME_TEAM",
+        "fullTime": {
+          "home": 4,
+          "away": 2
+        }
+      }
+    },
+    {
+      "id": 600026,
+      "utcDate": "2026-10-21T20:00:00Z",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "homeTeam": {
+        "id": null,
+        "name": "Manchester City FC",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Galatasaray SK",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": "DRAW",
+        "fullTime": {
+          "home": 3,
+          "away": 3
+        }
+      }
+    },
+    {
+      "id": 600027,
+      "utcDate": "2026-10-21T17:00:00Z",
+      "status": "FINISHED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 3,
+      "homeTeam": {
+        "id": null,
+        "name": "Real Madrid CF",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Juventus FC",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": "AWAY_TEAM",
+        "fullTime": {
+          "home": 0,
+          "away": 1
+        }
+      }
+    },
+    {
+      "id": 600028,
+      "utcDate": "2026-11-03T17:00:00Z",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "homeTeam": {
+        "id": null,
+        "name": "SSC Napoli",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Club Brugge KV",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": null,
+        "fullTime": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "id": 600029,
+      "utcDate": "2026-11-03T20:00:00Z",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "homeTeam": {
+        "id": null,
+        "name": "FC Bayern München",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Manchester City FC",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": null,
+        "fullTime": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "id": 600030,
+      "utcDate": "2026-11-03T17:00:00Z",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "homeTeam": {
+        "id": null,
+        "name": "Paris Saint-Germain FC",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Club Atlético de Madrid",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": null,
+        "fullTime": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "id": 600031,
+      "utcDate": "2026-11-03T20:00:00Z",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "homeTeam": {
+        "id": null,
+        "name": "Juventus FC",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Chelsea FC",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": null,
+        "fullTime": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "id": 600032,
+      "utcDate": "2026-11-03T17:00:00Z",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "homeTeam": {
+        "id": null,
+        "name": "FC Internazionale Milano",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Liverpool FC",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": null,
+        "fullTime": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "id": 600033,
+      "utcDate": "2026-11-04T20:00:00Z",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "homeTeam": {
+        "id": null,
+        "name": "Arsenal FC",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Real Madrid CF",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": null,
+        "fullTime": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "id": 600034,
+      "utcDate": "2026-11-04T17:00:00Z",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "homeTeam": {
+        "id": null,
+        "name": "PSV",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "FC Barcelona",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": null,
+        "fullTime": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "id": 600035,
+      "utcDate": "2026-11-04T20:00:00Z",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "homeTeam": {
+        "id": null,
+        "name": "Bayer 04 Leverkusen",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Borussia Dortmund",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": null,
+        "fullTime": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "id": 600036,
+      "utcDate": "2026-11-04T17:00:00Z",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 4,
+      "homeTeam": {
+        "id": null,
+        "name": "Galatasaray SK",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Sporting Clube de Portugal",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": null,
+        "fullTime": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "id": 600037,
+      "utcDate": "2026-11-24T17:00:00Z",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "homeTeam": {
+        "id": null,
+        "name": "Borussia Dortmund",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Sporting Clube de Portugal",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": null,
+        "fullTime": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "id": 600038,
+      "utcDate": "2026-11-24T20:00:00Z",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "homeTeam": {
+        "id": null,
+        "name": "SSC Napoli",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Galatasaray SK",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": null,
+        "fullTime": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "id": 600039,
+      "utcDate": "2026-11-24T17:00:00Z",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "homeTeam": {
+        "id": null,
+        "name": "Bayer 04 Leverkusen",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Club Brugge KV",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": null,
+        "fullTime": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "id": 600040,
+      "utcDate": "2026-11-24T20:00:00Z",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "homeTeam": {
+        "id": null,
+        "name": "Arsenal FC",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Club Atlético de Madrid",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": null,
+        "fullTime": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "id": 600041,
+      "utcDate": "2026-11-24T17:00:00Z",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "homeTeam": {
+        "id": null,
+        "name": "FC Bayern München",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Manchester City FC",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": null,
+        "fullTime": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "id": 600042,
+      "utcDate": "2026-11-25T20:00:00Z",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "homeTeam": {
+        "id": null,
+        "name": "Real Madrid CF",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "PSV",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": null,
+        "fullTime": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "id": 600043,
+      "utcDate": "2026-11-25T17:00:00Z",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "homeTeam": {
+        "id": null,
+        "name": "FC Internazionale Milano",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Juventus FC",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": null,
+        "fullTime": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "id": 600044,
+      "utcDate": "2026-11-25T20:00:00Z",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "homeTeam": {
+        "id": null,
+        "name": "Paris Saint-Germain FC",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Chelsea FC",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": null,
+        "fullTime": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "id": 600045,
+      "utcDate": "2026-11-25T17:00:00Z",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 5,
+      "homeTeam": {
+        "id": null,
+        "name": "FC Barcelona",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Liverpool FC",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": null,
+        "fullTime": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "id": 600046,
+      "utcDate": "2026-12-08T17:00:00Z",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 6,
+      "homeTeam": {
+        "id": null,
+        "name": "Paris Saint-Germain FC",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "FC Bayern München",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": null,
+        "fullTime": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "id": 600047,
+      "utcDate": "2026-12-08T20:00:00Z",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 6,
+      "homeTeam": {
+        "id": null,
+        "name": "Bayer 04 Leverkusen",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "PSV",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": null,
+        "fullTime": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "id": 600048,
+      "utcDate": "2026-12-08T17:00:00Z",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 6,
+      "homeTeam": {
+        "id": null,
+        "name": "Sporting Clube de Portugal",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Borussia Dortmund",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": null,
+        "fullTime": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "id": 600049,
+      "utcDate": "2026-12-08T20:00:00Z",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 6,
+      "homeTeam": {
+        "id": null,
+        "name": "Club Atlético de Madrid",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "FC Internazionale Milano",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": null,
+        "fullTime": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "id": 600050,
+      "utcDate": "2026-12-08T17:00:00Z",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 6,
+      "homeTeam": {
+        "id": null,
+        "name": "Chelsea FC",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Liverpool FC",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": null,
+        "fullTime": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "id": 600051,
+      "utcDate": "2026-12-09T20:00:00Z",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 6,
+      "homeTeam": {
+        "id": null,
+        "name": "Arsenal FC",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Galatasaray SK",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": null,
+        "fullTime": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "id": 600052,
+      "utcDate": "2026-12-09T17:00:00Z",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 6,
+      "homeTeam": {
+        "id": null,
+        "name": "FC Barcelona",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Club Brugge KV",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": null,
+        "fullTime": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "id": 600053,
+      "utcDate": "2026-12-09T20:00:00Z",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 6,
+      "homeTeam": {
+        "id": null,
+        "name": "Real Madrid CF",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "Juventus FC",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": null,
+        "fullTime": {
+          "home": null,
+          "away": null
+        }
+      }
+    },
+    {
+      "id": 600054,
+      "utcDate": "2026-12-09T17:00:00Z",
+      "status": "TIMED",
+      "stage": "LEAGUE_STAGE",
+      "matchday": 6,
+      "homeTeam": {
+        "id": null,
+        "name": "Manchester City FC",
+        "shortName": null,
+        "crest": null
+      },
+      "awayTeam": {
+        "id": null,
+        "name": "SSC Napoli",
+        "shortName": null,
+        "crest": null
+      },
+      "score": {
+        "winner": null,
+        "fullTime": {
+          "home": null,
+          "away": null
+        }
+      }
+    }
+  ]
+}
