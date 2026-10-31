@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments :: head(${c.businessName})}"></head>
+<body>
+<header th:replace="~{fragments :: nav}"></header>
+<main class="container">
+    <a th:href="@{/campaigns}" class="back">&larr; Campañas</a>
+    <div th:replace="~{fragments :: alerts}"></div>
+
+    <section class="panel head">
+        <img class="thumb" th:src="@{/media/{p}(p=${c.photoPath})}" alt="Foto original">
+        <div>
+            <h1 th:text="${c.businessName}"></h1>
+            <p th:if="${c.description}" th:text="${c.description}"></p>
+            <p class="muted small">
+                <span th:text="${c.network.label}"></span> ·
+                guiones por <span th:text="${c.scriptSource}"></span>
+            </p>
+            <span th:replace="~{fragments :: status(${c.status})}"></span>
+        </div>
+    </section>
+
+    <ol class="steps">
+        <li class="done">Foto recibida</li>
+        <li class="done">3 guiones propuestos</li>
+        <li th:classappend="${c.chosenScript != null} ? 'done'">Guion elegido</li>
+        <li th:classappend="${c.status.name() == 'MEDIA_READY' or c.status.name() == 'PUBLISHED'} ? 'done'">Fotos y video</li>
+        <li th:classappend="${c.status.name() == 'PUBLISHED'} ? 'done'">Publicado</li>
+    </ol>
+
+    <section class="panel">
+        <h2>Guiones</h2>
+        <div class="scripts">
+            <article class="script" th:each="s, it : ${c.scripts}"
+                     th:classappend="${c.chosenScript != null and c.chosenScript.id == s.id} ? 'chosen'">
+                <div class="script-head">
+                    <span class="num" th:text="${it.count}"></span>
+                    <div>
+                        <h3 th:text="${s.title}"></h3>
+                        <span class="muted small" th:text="${s.angle}"></span>
+                    </div>
+                </div>
+                <p class="hook" th:text="'“' + ${s.hook} + '”'"></p>
+                <ol class="scenes">
+                    <li th:each="sc : ${s.scenes}">
+                        <span th:text="${sc.overlay}"></span>
+                        <span class="look" th:text="${sc.look}"></span>
+                    </li>
+                </ol>
+                <p class="caption" th:text="${s.caption}"></p>
+                <p class="cta" th:if="${s.callToAction}" th:text="${s.callToAction}"></p>
+                <p class="tags" th:text="${s.hashtags}"></p>
+                <form th:if="${c.status.name() != 'PUBLISHED'}" method="post"
+                      th:action="@{/campaigns/{id}/choose(id=${c.id})}">
+                    <input type="hidden" name="scriptId" th:value="${s.id}">
+                    <button class="btn small" type="submit"
+                            th:text="${c.chosenScript != null and c.chosenScript.id == s.id} ? 'Elegido' : 'Usar este guion'"
+                            th:disabled="${c.chosenScript != null and c.chosenScript.id == s.id}"></button>
+                </form>
+            </article>
+        </div>
+    </section>
+
+    <section class="panel" th:if="${c.chosenScript != null}">
+        <h2>Contenido</h2>
+        <form th:if="${c.status.name() == 'SCRIPT_CHOSEN' or c.status.name() == 'MEDIA_READY'}" method="post"
+              th:action="@{/campaigns/{id}/generate(id=${c.id})}"
+              onsubmit="this.querySelector('button').disabled=true; this.querySelector('.loading').hidden=false;">
+            <button class="btn" type="submit"
+                    th:text="${c.status.name() == 'MEDIA_READY'} ? 'Volver a generar' : 'Generar 3 fotos y video'"></button>
+            <span class="loading" hidden>Generando fotos y video...</span>
+        </form>
+
+        <div class="media" th:if="${!#lists.isEmpty(c.assets)}">
+            <a th:each="img : ${c.images}" th:href="@{/media/{p}(p=${img.path})}" target="_blank">
+                <img th:src="@{/media/{p}(p=${img.path})}" alt="Foto generada">
+            </a>
+            <video th:if="${c.video}" controls muted loop playsinline
+                   th:src="@{/media/{p}(p=${c.video.path})}"></video>
+        </div>
+
+        <form th:if="${c.status.name() == 'MEDIA_READY'}" method="post" class="publish"
+              th:action="@{/campaigns/{id}/publish(id=${c.id})}">
+            <button class="btn publish-btn" type="submit" th:text="'Publicar en ' + ${c.network.label}"></button>
+        </form>
+    </section>
+
+    <section class="panel" th:if="${!#lists.isEmpty(c.publications)}">
+        <h2>Publicaciones</h2>
+        <table>
+            <thead><tr><th>Red</th><th>Modo</th><th>ID</th><th>Enlace</th></tr></thead>
+            <tbody>
+            <tr th:each="p : ${c.publications}">
+                <td th:text="${p.network.label}"></td>
+                <td th:text="${p.mode}"></td>
+                <td th:text="${p.externalId}"></td>
+                <td><a th:if="${p.url}" th:href="${p.url}" target="_blank">Ver post</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+</body>
+</html>

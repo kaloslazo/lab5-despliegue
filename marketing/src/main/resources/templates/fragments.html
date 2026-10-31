@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head(title)">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title th:text="${title} + ' | Postea'">Postea</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+<header th:fragment="nav" class="topbar">
+    <a class="brand" th:href="@{/campaigns}">Postea</a>
+    <span class="sub">marketing para negocios</span>
+</header>
+
+<div th:fragment="alerts">
+    <div th:if="${ok}" class="alert ok" th:text="${ok}"></div>
+    <div th:if="${error}" class="alert error" th:text="${error}"></div>
+</div>
+
+<span th:fragment="status(s)" class="status" th:classappend="${s}" th:switch="${s.name()}">
+    <th:block th:case="'SCRIPTS_READY'">Guiones listos</th:block>
+    <th:block th:case="'SCRIPT_CHOSEN'">Guion elegido</th:block>
+    <th:block th:case="'MEDIA_READY'">Contenido listo</th:block>
+    <th:block th:case="'PUBLISHED'">Publicado</th:block>
+</span>
+</body>
+</html>

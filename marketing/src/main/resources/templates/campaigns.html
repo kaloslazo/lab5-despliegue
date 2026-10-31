@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments :: head('Campañas')}"></head>
+<body>
+<header th:replace="~{fragments :: nav}"></header>
+<main class="container">
+    <div th:replace="~{fragments :: alerts}"></div>
+
+    <section class="panel">
+        <h2>Nueva campaña</h2>
+        <p class="muted">Sube una foto de tu producto o local. El sistema te propone 3 guiones,
+            escoges uno y se generan 3 fotos y un video listos para publicar.</p>
+
+        <form method="post" th:action="@{/campaigns}" th:object="${form}" enctype="multipart/form-data"
+              class="new-campaign" onsubmit="this.querySelector('button').disabled=true; this.querySelector('.loading').hidden=false;">
+            <div class="field">
+                <label for="businessName">Nombre del negocio</label>
+                <input id="businessName" type="text" th:field="*{businessName}" maxlength="80" placeholder="Ej: Panaderia Don Lucho">
+                <small class="err" th:if="${#fields.hasErrors('businessName')}" th:errors="*{businessName}"></small>
+            </div>
+            <div class="field">
+                <label for="description">¿Que vendes? <span class="muted">(opcional)</span></label>
+                <textarea id="description" th:field="*{description}" rows="3" maxlength="300"
+                          placeholder="Ej: pan de masa madre, delivery en Barranco y Miraflores"></textarea>
+                <small class="err" th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></small>
+            </div>
+            <div class="field">
+                <label>Red social</label>
+                <div class="radios">
+                    <label th:each="n : ${networks}">
+                        <input type="radio" th:field="*{network}" th:value="${n}">
+                        <span th:text="${n.label}"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="field">
+                <label for="photo">Foto (JPG o PNG, max 10 MB)</label>
+                <input id="photo" type="file" name="photo" accept="image/jpeg,image/png" required>
+            </div>
+            <button type="submit" class="btn">Generar guiones</button>
+            <p class="loading" hidden>Analizando la foto y escribiendo guiones, puede tardar unos segundos...</p>
+            <p class="muted small" th:text="'Generador de guiones: ' + ${generator}"></p>
+        </form>
+    </section>
+
+    <section class="panel">
+        <h2>Campañas</h2>
+        <p th:if="${#lists.isEmpty(campaigns)}" class="muted">Todavia no hay campañas.</p>
+        <div class="grid">
+            <a class="card" th:each="c : ${campaigns}" th:href="@{/campaigns/{id}(id=${c.id})}">
+                <img th:src="@{/media/{p}(p=${c.photoPath})}" alt="">
+                <div class="card-body">
+                    <strong th:text="${c.businessName}"></strong>
+                    <span class="muted small" th:text="${c.network.label} + ' · ' + ${#temporals.format(c.createdAtLima, 'dd/MM HH:mm')}"></span>
+                    <span th:replace="~{fragments :: status(${c.status})}"></span>
+                </div>
+            </a>
+        </div>
+    </section>
+</main>
+</body>
+</html>

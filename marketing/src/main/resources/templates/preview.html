@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments :: head('Vista previa')}"></head>
+<body class="preview-page">
+<main class="phone">
+    <div class="post-head">
+        <span class="avatar" th:text="${#strings.substring(c.businessName, 0, 1)}"></span>
+        <strong th:text="${c.businessName}"></strong>
+        <span class="muted small" th:text="${c.network.label} + ' · simulado'"></span>
+    </div>
+
+    <div class="carousel">
+        <img th:each="img : ${c.images}" th:src="@{/media/{p}(p=${img.path})}" alt="">
+        <video th:if="${c.video}" th:src="@{/media/{p}(p=${c.video.path})}" controls muted loop playsinline autoplay></video>
+    </div>
+
+    <div class="post-body" th:if="${c.chosenScript}">
+        <p><strong th:text="${c.businessName}"></strong>
+            <span class="pre" th:text="${c.chosenScript.fullCaption()}"></span></p>
+    </div>
+    <p class="small muted center"><a th:href="@{/campaigns/{id}(id=${c.id})}">Volver a la campaña</a></p>
+</main>
+</body>
+</html>

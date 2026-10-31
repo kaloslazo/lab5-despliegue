@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments :: head('No encontrado')}"></head>
+<body>
+<header th:replace="~{fragments :: nav}"></header>
+<main class="container">
+    <h1>404</h1>
+    <p th:text="${message}"></p>
+    <a th:href="@{/campaigns}" class="btn">Ir a campañas</a>
+</main>
+</body>
+</html>
