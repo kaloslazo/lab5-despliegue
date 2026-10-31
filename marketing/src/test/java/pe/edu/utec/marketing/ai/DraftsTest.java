@@ -49,6 +49,6 @@ class DraftsTest {
         assertEquals(3, scripts.size());
         assertEquals(3, scripts.stream().map(Script::getAngle).distinct().count());
         assertTrue(scripts.get(0).getHashtags().contains("#cafenana"));
-        assertTrue(scripts.get(0).fullCaption().contains("#fyp"));
+        assertTrue(scripts.get(0).fullCaption().contains("#fyp #parati"));
     }
 }

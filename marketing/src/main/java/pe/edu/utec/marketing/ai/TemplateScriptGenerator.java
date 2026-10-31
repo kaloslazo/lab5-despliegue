@@ -5,6 +5,7 @@ import pe.edu.utec.marketing.model.Network;
 import pe.edu.utec.marketing.model.Script;
 
 import java.text.Normalizer;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
@@ -18,7 +19,9 @@ public class TemplateScriptGenerator implements ScriptGenerator {
                 ? "lo que hacemos con dedicacion todos los dias"
                 : description.strip();
         String tag = "#" + slug(name);
-        String red = network == Network.TIKTOK ? "#fyp #parati" : "#instagood #emprendimiento";
+        List<String> red = network == Network.TIKTOK
+                ? List.of("#fyp", "#parati")
+                : List.of("#instagood", "#emprendimiento");
 
         ScriptDrafts.Draft beneficio = new ScriptDrafts.Draft(
                 "Lo que nos hace distintos",
@@ -28,7 +31,7 @@ public class TemplateScriptGenerator implements ScriptGenerator {
                         scene("Hecho con calidad", Look.WARM),
                         scene("Te va a encantar", Look.VIVID)),
                 "En " + name + " nos enfocamos en " + about + ". Cada detalle esta pensado para ti.",
-                List.of(tag, "#hechoenperu", "#calidad", red),
+                tags(red, tag, "#hechoenperu", "#calidad"),
                 "Escribenos por DM y te contamos mas");
 
         ScriptDrafts.Draft emocional = new ScriptDrafts.Draft(
@@ -40,7 +43,7 @@ public class TemplateScriptGenerator implements ScriptGenerator {
                         scene(name, Look.WARM)),
                 "Detras de " + name + " hay personas que ponen el corazon en " + about
                         + ". Gracias por acompañarnos en este camino.",
-                List.of(tag, "#emprendedores", "#apoyaloslocal", red),
+                tags(red, tag, "#emprendedores", "#apoyaloslocal"),
                 "Siguenos para ver mas");
 
         ScriptDrafts.Draft directo = new ScriptDrafts.Draft(
@@ -51,7 +54,7 @@ public class TemplateScriptGenerator implements ScriptGenerator {
                         scene("Asi de simple", Look.VIVID),
                         scene("Pidelo hoy", Look.COOL)),
                 name + ": " + about + ". Sin complicaciones, directo a lo que necesitas.",
-                List.of(tag, "#novedad", "#lima", red),
+                tags(red, tag, "#novedad", "#lima"),
                 "Haz tu pedido por mensaje directo");
 
         return List.of(beneficio, emocional, directo).stream().map(Drafts::toScript).toList();
@@ -60,6 +63,12 @@ public class TemplateScriptGenerator implements ScriptGenerator {
     @Override
     public String name() {
         return "plantillas";
+    }
+
+    private static List<String> tags(List<String> red, String... propios) {
+        List<String> all = new ArrayList<>(List.of(propios));
+        all.addAll(red);
+        return all;
     }
 
     private static ScriptDrafts.DraftScene scene(String text, Look look) {
