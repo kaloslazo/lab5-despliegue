@@ -1,0 +1,12 @@
+{$CHAMPIONS_HOST} {
+	encode gzip
+	reverse_proxy champions:8080
+}
+
+{$MARKETING_HOST} {
+	encode gzip
+	request_body {
+		max_size 12MB
+	}
+	reverse_proxy marketing:8080
+}

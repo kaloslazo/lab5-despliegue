@@ -1,0 +1,84 @@
+# compose que corre en el servidor (EC2): las dos apps, sus bases de datos y caddy como proxy con https
+services:
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      CHAMPIONS_HOST: ${CHAMPIONS_HOST}
+      MARKETING_HOST: ${MARKETING_HOST}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - champions
+      - marketing
+
+  champions-db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: champions
+      POSTGRES_USER: champions
+      POSTGRES_PASSWORD: ${CHAMPIONS_DB_PASSWORD:?falta CHAMPIONS_DB_PASSWORD}
+    volumes:
+      - champions_pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U champions -d champions"]
+      interval: 5s
+      retries: 10
+
+  champions:
+    image: ghcr.io/kaloslazo/champions-predictor:${TAG:-latest}
+    restart: unless-stopped
+    depends_on:
+      champions-db:
+        condition: service_healthy
+    environment:
+      DB_URL: jdbc:postgresql://champions-db:5432/champions
+      DB_USER: champions
+      DB_PASSWORD: ${CHAMPIONS_DB_PASSWORD}
+      FOOTBALL_DATA_TOKEN: ${FOOTBALL_DATA_TOKEN:-}
+      JAVA_TOOL_OPTIONS: -Xmx384m
+
+  marketing-db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: marketing
+      POSTGRES_USER: marketing
+      POSTGRES_PASSWORD: ${MARKETING_DB_PASSWORD:?falta MARKETING_DB_PASSWORD}
+    volumes:
+      - marketing_pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U marketing -d marketing"]
+      interval: 5s
+      retries: 10
+
+  marketing:
+    image: ghcr.io/kaloslazo/marketing-app:${TAG:-latest}
+    restart: unless-stopped
+    depends_on:
+      marketing-db:
+        condition: service_healthy
+    environment:
+      DB_URL: jdbc:postgresql://marketing-db:5432/marketing
+      DB_USER: marketing
+      DB_PASSWORD: ${MARKETING_DB_PASSWORD}
+      PUBLIC_BASE_URL: https://${MARKETING_HOST}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      INSTAGRAM_USER_ID: ${INSTAGRAM_USER_ID:-}
+      INSTAGRAM_TOKEN: ${INSTAGRAM_TOKEN:-}
+      JAVA_TOOL_OPTIONS: -Xmx512m
+    volumes:
+      - marketing_media:/data/media
+
+volumes:
+  caddy_data:
+  caddy_config:
+  champions_pg:
+  marketing_pg:
+  marketing_media:
