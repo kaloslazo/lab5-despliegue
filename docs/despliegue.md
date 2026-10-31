@@ -157,9 +157,12 @@ Para no pagar cuando no se usa: `aws ec2 stop-instances --instance-ids <id>` (la
 
 ## Evidencias
 
-> Agregar capturas en `docs/evidencias/`:
-> - Pestaña Actions con el workflow en verde
-> - Paquetes en GHCR
-> - Instancia EC2 corriendo en la consola de AWS
-> - `docker compose ps` en el servidor
-> - Las dos apps funcionando por HTTPS (listado, prediccion, campaña con guiones, fotos, video y publicacion)
+Capturas tomadas sobre la version desplegada (31/10/2026), en [`docs/evidencias/`](evidencias):
+
+| Pregunta 1 | Pregunta 2 | Despliegue |
+|---|---|---|
+| [Listado de partidos](evidencias/02-p1-listado-partidos.png) | [Carga de foto](evidencias/07-p2-formulario.png) | [GitHub Actions](evidencias/13-deploy-actions-run.png) |
+| [Validacion](evidencias/03-p1-validacion-error.png) | [3 guiones](evidencias/08-p2-tres-guiones.png) | [Paquetes GHCR](evidencias/14-deploy-ghcr.png) |
+| [Prediccion registrada](evidencias/04-p1-prediccion-registrada.png) | [Fotos y video](evidencias/09-p2-fotos-video.png) | [docker compose ps](evidencias/15-servidor-docker-compose.png) |
+| [Predicciones](evidencias/05-p1-predicciones.png) | [Publicado](evidencias/10-p2-publicado.png) | [Base de datos](evidencias/16-servidor-base-de-datos.png) |
+| [API JSON](evidencias/06-p1-api-json.png) | [Vista previa del post](evidencias/11-p2-preview-post.png) | [EC2 y security group](evidencias/17-aws-ec2.png) |
