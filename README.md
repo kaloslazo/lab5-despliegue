@@ -9,7 +9,12 @@ Diseño de Software - UTEC
 | Imagen | `ghcr.io/kaloslazo/champions-predictor` | `ghcr.io/kaloslazo/marketing-app` |
 | Documentacion | [arquitectura y flujo de datos](docs/pregunta1-arquitectura.md) | [arquitectura y flujo](docs/pregunta2-arquitectura.md) |
 
-Despliegue en AWS: [docs/despliegue.md](docs/despliegue.md)
+**Desplegado en AWS (EC2):**
+
+- Pregunta 1: https://champions.13-59-38-112.sslip.io
+- Pregunta 2: https://marketing.13-59-38-112.sslip.io
+
+Procedimiento de despliegue: [docs/despliegue.md](docs/despliegue.md)
 
 ## Stack
 
